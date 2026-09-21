@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "name": "GitHub API status",
+      "url": "https://api.github.com/",
+      "method": "GET",
+      "expected_status": 200,
+      "max_latency_ms": 3000,
+      "json_path": "current_user_url",
+      "json_equals": "https://api.github.com/user",
+      "headers": {"Accept": "application/vnd.github+json"},
+      "timeout": 10
+    }
+  ]
+}
