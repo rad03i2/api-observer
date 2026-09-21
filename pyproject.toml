@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-observer"
+version = "1.0.0"
+description = "Local, dependency-free HTTP API health monitor with assertions, history, and JSON reporting."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Radwan Abdulhadi Ahmed"}]
+keywords = ["api", "monitoring", "health-check", "http", "cli"]
+
+[project.scripts]
+api-observer = "api_observer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
